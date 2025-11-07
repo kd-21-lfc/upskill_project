@@ -1,0 +1,72 @@
+[
+    {
+        "id": "mqtt_in",
+        "type": "mqtt in",
+        "name": "Air Quality Data",
+        "topic": "airquality/sensor1",
+        "broker": "mqtt_broker",
+        "x": 150,
+        "y": 100
+    },
+    {
+        "id": "json_parse",
+        "type": "json",
+        "name": "Parse JSON",
+        "x": 350,
+        "y": 100
+    },
+    {
+        "id": "gauge_raw",
+        "type": "ui_gauge",
+        "name": "Raw Sensor Value",
+        "group": "air_quality_group",
+        "min": 0,
+        "max": 1024,
+        "x": 550,
+        "y": 80
+    },
+    {
+        "id": "gauge_ppm",
+        "type": "ui_gauge",
+        "name": "PPM Value",
+        "group": "air_quality_group",
+        "min": 0,
+        "max": 500,
+        "x": 550,
+        "y": 120
+    },
+    {
+        "id": "text_status",
+        "type": "ui_text",
+        "name": "Air Quality Status",
+        "group": "air_quality_group",
+        "x": 550,
+        "y": 160
+    },
+    {
+        "id": "chart_history",
+        "type": "ui_chart",
+        "name": "PPM History",
+        "group": "air_quality_group",
+        "x": 550,
+        "y": 200
+    },
+    {
+        "id": "mqtt_broker",
+        "type": "mqtt-broker",
+        "name": "HiveMQ Broker",
+        "broker": "broker.hivemq.com",
+        "port": "1883"
+    },
+    {
+        "id": "air_quality_group",
+        "type": "ui_group",
+        "name": "Air Quality Monitor",
+        "tab": "air_quality_tab"
+    },
+    {
+        "id": "air_quality_tab",
+        "type": "ui_tab",
+        "name": "Air Quality Dashboard"
+    }
+]
